@@ -12,7 +12,7 @@ export default [
       {
         file: packageJson.main,// since we are adding line we need to make change into package.json to the main keyword's value "dist/cjs/index.js"
         format: 'cjs',
-        sourcemap: true,
+        sourcemap: true,// true so that anyone using our component will be able to see what type or interface component demands
       },
       {
         file: packageJson.module,// since we are adding line we need to add module keyword into package.json with value "dist/esm/index.js"
@@ -28,7 +28,7 @@ export default [
     ],
   },
   {
-    input: 'dist/esm/types/index.d.ts',
+    input: 'dist/esm/types/index.d.ts',//rollup will take file from this path and turn it into below output path using plugin dts
     output: [{ file: 'dist/index.d.ts', format: 'esm' }],
     plugins: [dts()],
     external: [/\.css$/],
