@@ -9,18 +9,19 @@
     "dist"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "rollup -c --watch",
+    "build": "rollup -c"
   },
   "author": "Akshay Surve",
   "license": "MIT",
   "devDependencies": {
-    "@types/react": "^18.2.57",
-    "typescript": "^5.3.3"
-  },
-  "dependencies": {
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-typescript": "^11.1.6",
-    "rollup-plugin-dts": "^6.1.0"
+    "@types/react": "^18.2.57",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.3"
   }
 }
